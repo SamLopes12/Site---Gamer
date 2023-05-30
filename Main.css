@@ -1,0 +1,173 @@
+/* -------------------- Criando o reset do site, ou seja, tirando todas as predefinicoes "de fabrica" -------------------- */
+
+* { /* A tag "*" seleciona o site todo */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} /* SEMPRE FAZRER ISSO NO COMECO DO CODIGO CSS */
+
+
+/* -------------------- Estilizando a Tag Header (cabecalho: botoes e "Gamer Station") -------------------- */
+
+body, input, textarea {
+    font-family: 'Roboto', sans-serif;
+}
+
+header h1 { /* Mudando a fonte do titulo "Gamer Station" */
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+}
+
+header li a,
+section h2,
+section h3 { /* Alterando a fonte dos botoes do cabecalho e, do titulo da secao "Sobre a Loja" */
+    font-family: 'Bungee', cursive;
+    font-weight: normal;
+}
+
+header {
+    padding: 16px 50px; /* Espacamento interno (16px para a parte de cima e a parte de baixo, e 50px para as laterais) */
+    background-color: #020342;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+header h1 {
+    margin-left: 3px;
+}
+
+.controller {
+    height: 80px;
+}
+
+
+/* -------------------- Ajustando os botoes do menu em linha (ajustando a lista ordenada que criamos) -------------------- */
+
+
+header nav li {
+    display: inline; /* Como eu quero que apareca no meu display (display = tela)? Inline (em linha) */
+    margin-left: 20px;
+    font-size: 20px; /* tamanho da fonte dos botoes */
+
+    /* color: rgb(0, 255, 179); A propriedade color nao funcionou!, isso pq quando trabalhamos com link, necessita colocar o header nav li "a" no final, pra dizer que estamnos alterando a cor do botao de link  */
+}
+
+header nav li a {
+    color: #ffffff ; /* Alterando a cor dos botoes do cabecalho "Sobre a loja" e "Contato" */
+    text-decoration: none; /* Tirando o "undeerline" dos botoes */
+}
+
+header nav li a:hover {
+    text-decoration: underline; /* Colocando animacao para quando colocar o mouse encima do botao */
+}
+
+
+/* -------------------- Toques finais no cabecalho, organizando os botoes lado a lado com o nome do site e centralizando conteudo do cabecalho. -------------------- */
+
+
+.container { /* Centralizamos o conteudo */
+    max-width: 1280px; /* Limitamos a area de trabalho que ele aparece */
+    width: 100%; /* Faalamos para ocupar toda a area de trabalho permitida (1280px) */
+    margin: 0 auto; /* Colocamos 0 de margem embaixo e encima e colocamos a margem automatica nas laterais */
+}
+
+header .container,  /* Utilizando o container do header para editar todo o cabecalho */
+section .container { /* Aproveitando o que fizemos no cabecalho para editar a secao tambem */
+    display: flex; /* A tag utilizada para que os itens fiquem lado a lado, e o "display: flex;" */
+    align-items: center; /* Centralizando o ojetivo na vertical, na margem de cima e de baixo */
+    justify-content: space-between; /* Aqui estamos pegando os botoes e o nome do site e colocando um em cada ponta. VER NO SITE */
+}
+
+
+/* -------------------- Editando a Secao "Sobre a Loja" -------------------- */
+
+
+.brands img { /* Aqui vamos editar as imagens das marcas utilizando o container "brands" que fizemos exatamente para isso */
+    height: 24px;
+}
+
+.brands li { /* Acima nos somente editamos a imagem em si, aqui nos vamos editar a lista ordenda, nao da para colocar as imagens lado a lado se nao editarmos a lista "li" */
+    display: inline;
+    margin-right: 10px;
+    /* margin-left: 20px; */
+}
+
+section .container { /* Aqui estamos sobrescrevendo a regra que utilizamos acima, ja que aproveitamos a estilizacao do cabecalho para estilizar A secao tbm, so que a centralizacao estava ruim, entao sobrescrevemos */
+    align-items: flex-start; /* Isso se chama RECURSO DE CASCATA, ou seja, podemos reescrever uma regra anterior */
+}
+
+section {
+    padding: 40px 0;
+}
+
+section {
+    color: #020342;
+}
+
+section p {
+    /* margin-left: 20px; */
+    margin-bottom: 10px;
+}
+
+.store {
+    margin-right: 25px;
+}
+
+/*------------------------------ Editando a secao "Contato" ------------------------------*/
+
+.social-links img { /* Editando os logos das redes sociais */
+    height: 24px;
+}
+
+.social-links li {
+    display: inline;
+    margin-right:90px;
+}
+
+.social-links a { /* tinha uma sujeirinha entre os logos das redes sociais, nos tiramos isso aqui  */
+    text-decoration: none;
+}
+
+#contact .container { /* Colocando os itens da secao "Contato" embaixo do titulo da secao */
+    display: block;
+}
+
+.contact-methods { /* Apos colocar embaixo, organizamos para ficarem um ao lado do outro */
+    display: flex;
+    justify-content: space-between; /* Aplicando um espacamento igualitario entre as subsecoes da secao contato */
+}
+
+form input,
+form textarea,
+form button {
+    display: block; /* O display block e para organizar em blocos (quadrado), logo, automaticamente os itens selecionados, se organizar em um bloco, fica um embaixo do outro */
+    width: 320px;
+    margin-bottom:5px;
+    padding: 8px;
+}
+
+form textarea {
+    resize: none; /* Desabilitando a opcao de redimensionar a caixa de texto */
+    height: 150px;
+}
+
+form button {
+    background-color: #020342;
+    color: #FFF;
+    border: none;
+    cursor: pointer; /* Aqui estamos mudando o ponteiro do mouse quando passam ele encima do botao, o normal e aquela setinha padra, mas geralmente em coisas clicaveis, vai aquele dedo, entao estamos colocando para aparecer o dedinho */
+}
+
+form button:hover { /* Colocando efeito para quando o usauraio passar o mouse encima do botao ele ficar com a cor mais clara */
+    background-color: #212275;
+}
+
+input:focus, textarea:focus { /* Aqui estamos mudando a cor da borda quando das caixas do formulario quando o usuario estiver preenchendo o mesmo */
+    outline-color: #020342;
+}
+
+footer {
+    background-color: #020342;
+    color: #FFF;
+    padding: 10px 0;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer Station - Sua primeira opcao em Game</title>
+    <link rel="stylesheet" href="./Main.css">
+
+<!--------------------------- Inserindo Fontes do Google --------------------------->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&family=Roboto&family=Rubik+Puddles&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!--------------------------- Cabecalho --------------------------->
+
+    <header>
+        <div class="container"> <!-- A criacao do container, serve para estilizar todo o cabecalho, colocando os botoes lado a lado com o nome do site, etc. -->
+            <h1>Gamer Station</h1>
+            <img class ="controller" src="./images/controle 2.jpg" alt="">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#about">Sobre a Loja</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contato</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!--------------------------- Secao Sobre a Loja --------------------------->
+
+    <section id="about"> <!-- Criando a secao "sobre a loja" -->
+        <div class="container"> <!-- Acrescentando o conteudo do site no container principal -->
+            <img class="store" src="./images/loja.jpg" alt="Fachada da Loja"> <!-- Criei uma classe somente para a imagem da fachada da loja, isso pq preciso editar somente essa imagem e o CSS precisa reconhecer isso -->
+            <div>
+                <h2>Sobre a Loja</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sunt officiis, necessitatibus, cum explicabo aperiam temporibus fugiat sequi at in exercitationem enim iure harum impedit est eligendi mollitia voluptates pariatur!
+                </p>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, eveniet tempore atque totam nobis rerum possimus delectus voluptatum consequuntur nemo saepe id quam dignissimos vel! Blanditiis ab magnam commodi deleniti?
+                </p>
+                <ul class="brands"> <!-- Criando um container especifico para edicao das imagens das marcas abaixo -->
+                    <li><img src="./images/nintendo.png" alt="Nintendo"></li>
+                    <li><img src="./images/xbox.png" alt="Xbox"></li>
+                    <li><img src="./images/playstation.png" alt="Playstation"></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+<!--------------------------- Secao Contato --------------------------->
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contato</h2>
+            <div class="contact-methods">
+                <div>
+                    <h3>Fale Conosco</h3>
+                    <form> <!-- Tag usada para se fazer um formulario -->
+                        <input type="text" placeholder="Seu nome" required /> <!-- Criando espaco de texto para colocar o nome -->
+                        <input type="email" placeholder="Seu e-mail" required /> <!-- Criando espaco de e-mail para colocarem o e-mail -->
+                        <input type="tel" placeholder="Seu telefone (Opcional)" /> <!-- Criando espaco para colocarem contato telefonico -->
+                        <textarea placeholder="Sua Mensagem" required> </textarea> <!-- Criando area de texto para enviarem a mensagem que desejam -->
+                        <button type="submit">Enviar</button> <!-- Criando o botao fo tipo "submit" para enviar o formulario -->
+                    </form>
+                </div>
+                <div/>
+                    <h3>Nos Siga nas Redes Sociais</h3> <!-- Colocando os logos e links das redes sociais -->
+                    <ul class="social-links"> <!-- Aqui nos vamos criar uma lista nao ordenada para colocar as redes sociais -->
+                        <li>
+                            <a href="#" title="Siga-nos nos Instagram">
+                                <img src="./images/instagram.png" alt="Logo do Instagram">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Siga-nos no Facebook">
+                                <img src="./images/facebook.png" alt="Logo do Facebook">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Visite nosso Canal do Youtube">
+                                <img src="./images/youtube.png" alt="Logo do Youtube">
+                            </a>
+                        </li>
+                    </ul> 
+                </div>
+                <div>
+                    <h3>Venha nos Visitar!</h3>
+                    <p>
+                        Rua Primeiro Projeto 0001 - Vila CSS - HTML/SP
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>
+                &copy; Gamer Station - Todos os Direitos Reservados - 2023
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
